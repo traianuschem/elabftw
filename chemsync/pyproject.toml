@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "chemsync"
+version = "0.1.0"
+description = "eLabFTW Chemical Database Synchronization Tool"
+requires-python = ">=3.11"
+dependencies = [
+    "requests>=2.31",
+    "pandas>=2.0",
+]
+
+[project.optional-dependencies]
+gui = ["PyQt6>=6.5"]
+dev = ["pytest>=7.0", "responses>=0.23"]
+
+[project.scripts]
+chemsync = "chemsync.__main__:main"
+
+[tool.setuptools.packages.find]
+include = ["chemsync*"]

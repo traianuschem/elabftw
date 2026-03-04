@@ -1,0 +1,30 @@
+{
+  "name": "ChemDB Inventarliste",
+  "format": {
+    "delimiter": ";",
+    "encoding": "utf-8",
+    "quoting": "all",
+    "has_header": false,
+    "comment_prefix": "#",
+    "decimal_separator": ",",
+    "room_from_header": true
+  },
+  "columns": [
+    {"index": 0, "target": "item.title"},
+    {"index": 1, "target": "compound.cas_number"},
+    {"index": 2, "target": "container.qty_and_unit", "parser": "quantity"},
+    {"index": 3, "target": "extra_field.Description"},
+    {"index": 4, "target": "compound.h_statements", "parser": "hazard_mapper"},
+    {"index": 5, "target": "extra_field.P-Statements", "parser": "strip_annotations"},
+    {"index": 6, "target": "_ignore"},
+    {"index": 7, "target": "extra_field.Supplier Info"},
+    {"index": 8, "target": "storage.location"},
+    {"index": 9, "target": "extra_field.Responsible Person"},
+    {"index": 10, "target": "extra_field.Purity"},
+    {"index": 11, "target": "_ignore"},
+    {"index": 12, "target": "compound.molecular_weight", "parser": "decimal_de"},
+    {"index": 13, "target": "extra_field.Melting/Boiling Point"},
+    {"index": 14, "target": "_ignore"},
+    {"index": 15, "target": "extra_field.Appearance"}
+  ]
+}
